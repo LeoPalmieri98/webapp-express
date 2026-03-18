@@ -1,0 +1,13 @@
+{
+  "name": "webapp-express",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Leo Palmieri",
+  "scripts": {
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
