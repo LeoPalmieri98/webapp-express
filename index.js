@@ -14,7 +14,7 @@ app.use(express.json());
 app.get("/", (req, res) => {
     res.send("Welcome-ato our server")
 });
-app.use("/movies,", moviesRouter);
+app.use("/movies", moviesRouter);
 app.use(notFoundMiddleware);
 app.use(errorsHandlerMiddleware);
 
