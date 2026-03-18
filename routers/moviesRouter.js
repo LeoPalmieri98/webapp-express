@@ -12,19 +12,19 @@ router.get('/:id', moviesController.show);
 
 //Store (Crud):
 
-router.post('/', moviesController.store)
+//router.post('/', moviesController.store)
 
 //Update (crUd):
 
-router.put('/:id', moviesController.update)
+//router.put('/:id', moviesController.update)
 
 //Modify (crUd):
 
-router.patch('/:id', moviesController.modify)
+//router.patch('/:id', moviesController.modify)
 
 //Destroy (cruD):
 
-router.delete('/:id', moviesController.destroy)
+//router.delete('/:id', moviesController.destroy)
 
 
 module.exports = router;

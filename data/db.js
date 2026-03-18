@@ -4,7 +4,7 @@ const dbconfing = {
     host: "localhost",
     port: 3306,
     user: "root",
-    pass: "root",
+    password: "root",
     database: "db_movies",
 };
 const db = mysql.createConnection(dbconfing);
