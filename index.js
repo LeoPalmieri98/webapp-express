@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+
 
 const moviesRouter = require("./routers/moviesRouter.js")
 const notFoundMiddleware = require("./middlewares/notFound");
@@ -18,6 +18,6 @@ app.use("/movies", moviesRouter);
 app.use(notFoundMiddleware);
 app.use(errorsHandlerMiddleware);
 
-app.listen(3000, () => {
-    console.log(`Express ready, http://localhost:${port}/`)
+app.listen(process.env.APP_PORT, () => {
+    console.log(`Express ready, http://localhost:${process.env.APP_PORT}/`)
 });

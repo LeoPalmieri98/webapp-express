@@ -43,16 +43,16 @@ const show = (req, res) => {
             return res.status(404).json({ error: "Not found", message: "Impossibile trovare la risorsa richiesta" });
         }
 
-        const post = results[0];
-        console.log("post", post);
+        const movie = results[0];
+        console.log("movie", movie);
 
-        db.query(relationsQuery, parametriQuery, (error, results) => {
+        db.query(relationsQuery, parametriQuery, (error, reviewResults) => {
 
             if (error) {
                 return res.status(500).json({ error: "Query error", message: "Impossibile processare la richiesta" });
             }
-
-            res.json(post);
+            movie.reviews = reviewResults;
+            res.json(movie);
 
         });
 

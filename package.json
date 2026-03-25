@@ -5,7 +5,7 @@
   "license": "ISC",
   "author": "Leo Palmieri",
   "scripts": {
-    "dev": "node --watch index.js"
+    "dev": "node --env-file=.env --watch index.js"
   },
   "dependencies": {
     "express": "^5.2.1",
