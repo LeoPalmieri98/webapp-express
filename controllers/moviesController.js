@@ -59,10 +59,35 @@ const show = (req, res) => {
     });
 };
 
+function storeReview(req, res) {
+
+    const id = req.params.id;
+
+
+    const { name, vote, text, } = req.body;
+
+
+
+    const sqlQuery = "INSERT INTO reviews (text,name,vote,movie_id) VALUES (?,?,?,?)";
+
+    db.query(sqlQuery, [text, name, vote, id], (err, results) => {
+
+        if (err) {
+            return res.status(500).json({
+                error: "Database query error",
+                message: err.message
+            });
+        }
+
+        res.status(201).json({ message: "Review added", id: results.insertId });
+
+    });
+}
 
 const controllers = {
     index,
-    show
+    show,
+    storeReview
 }
 
 module.exports = controllers;
